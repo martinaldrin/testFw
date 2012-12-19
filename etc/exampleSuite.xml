@@ -1,0 +1,19 @@
+<testsuite name="">
+	<parameters>
+
+	</parameters>
+	<resources name="STP">
+		<node type="rnc" ip="" user="" pw="" id="" proxy=""/>
+		<node type="rnc" ip="" user="" pw="" id="" proxy=""/>	
+	</resources>
+	<class id="">
+		<test name="disk_usage">
+			<parameter name="/local/tmp/"/>	
+		<test>
+		<subsuite name="">
+			<test name="disk_usage">
+                       		<parameter name="/local/tmp/"/>
+                	<test>
+		</subsuite>
+	</class>
+</testsuite>
