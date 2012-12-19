@@ -1,19 +1,31 @@
 <testsuite name="">
 	<parameters>
-
+		<parameter name=""/>
 	</parameters>
 	<resources name="STP">
-		<node type="rnc" ip="" user="" pw="" id="" proxy=""/>
-		<node type="rnc" ip="" user="" pw="" id="" proxy=""/>	
+		<node name="" type="rnc" ip="" user="" pw="" id="" proxy="">
+			<parameter name=""\>
+		</node>
+		<node name="" type="rnc" ip="" user="" pw="" id="" proxy=""/>	
 	</resources>
-	<class id="">
+	<loop>
+        	<parameter></parameter>
+        </loop>
+	<class id="" iteration=""> <!-- id: node name, node id, node type, node ip-->
+		<loop>
+			<parameter></parameter>
+		</loop>
 		<test name="disk_usage">
 			<parameter name="/local/tmp/"/>	
 		<test>
-		<subsuite name="">
-			<test name="disk_usage">
-                       		<parameter name="/local/tmp/"/>
+		<subsuite name=""> <!--name of subsuite-->
+			<test name="diskUsage">  <!-- name of the test case name. -->
+                       		<parameter name="/local/tmp/"/> <!-- parameter name can be accssed from test case, with $ global parameter will be used.
                 	<test>
+			<assert type="" test=""\> <!-- type=exit, class, subsuite -->
 		</subsuite>
+		<test name="" sync="">     <!--node name, node id, node type -->
+			
+		<test>
 	</class>
 </testsuite>
