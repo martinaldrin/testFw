@@ -1,31 +1,42 @@
 <testsuite name="">
+	<log>
+		<logger name="htmlReport" path=""/>
+		<logger name="xmlReport" path=""/>
+		<logger name="consoleReport"/>
+	</log>	
 	<parameters>
 		<parameter name=""/>
 	</parameters>
 	<resources name="STP">
 		<node name="" type="rnc" ip="" user="" pw="" id="" proxy="">
-			<parameter name=""\>
+			<parameter name=""/>
 		</node>
 		<node name="" type="rnc" ip="" user="" pw="" id="" proxy=""/>	
 	</resources>
 	<loop>
         	<parameter></parameter>
         </loop>
-	<class id="" iteration=""> <!-- id: node name, node id, node type, node ip-->
+	<testparameter>
+		<test name="diskUsage">
+			<parameter name=""/>
+		</test>
+	</testparameter>
+	<run id="" iteration=""> <!-- id: node name, node id, node type, node ip-->
 		<loop>
 			<parameter></parameter>
 		</loop>
+		<logger name="consoleReport" level="INFO"/>
 		<test name="disk_usage">
 			<parameter name="/local/tmp/"/>	
-		<test>
+		</test>
 		<subsuite name=""> <!--name of subsuite-->
 			<test name="diskUsage">  <!-- name of the test case name. -->
-                       		<parameter name="/local/tmp/"/> <!-- parameter name can be accssed from test case, with $ global parameter will be used.
-                	<test>
-			<assert type="" test=""\> <!-- type=exit, class, subsuite -->
+                       		<parameter name="/local/tmp/"/> <!-- parameter name can be accssed from test case, with $ global parameter will be used.-->
+                	</test>
+			<assert type="" test=""/> <!-- type=exit, class, subsuite -->
 		</subsuite>
 		<test name="" sync="">     <!--node name, node id, node type -->
 			
-		<test>
-	</class>
+		</test>
+	</run>
 </testsuite>
